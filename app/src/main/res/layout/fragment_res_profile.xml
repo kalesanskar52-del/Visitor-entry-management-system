@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:id="@+id/profile_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Name: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/ic_menu_myplaces" android:drawablePadding="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                <TextView android:id="@+id/profile_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Email: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/ic_dialog_email" android:drawablePadding="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                <TextView android:id="@+id/profile_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mobile: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/stat_sys_phone_call" android:drawablePadding="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                <TextView android:id="@+id/profile_flat" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Flat No: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/ic_menu_directions" android:drawablePadding="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                <TextView android:id="@+id/profile_wing" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Wing: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/ic_menu_sort_alphabetically" android:drawablePadding="10dp"/>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+                <TextView android:id="@+id/profile_society" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Society: Loading..." android:textSize="18sp" android:padding="10dp" android:drawableStart="@android:drawable/ic_menu_view" android:drawablePadding="10dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:text="EDIT PROFILE"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

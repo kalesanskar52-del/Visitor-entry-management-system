@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/roleToggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@+id/btnRoleReception"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRoleReception"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reception"
+                app:strokeColor="#000000"
+                android:textColor="#000000"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRoleResident"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resident"
+                app:strokeColor="#000000"
+                android:textColor="#000000"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="#E5E7EB"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnCapturePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Take Photo"
+                    android:backgroundTint="#000000"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Full Name *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etFullName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#000000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Mobile No *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etMobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" android:textColor="#000000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Email *" app:boxStrokeColor="#000000" app:hintTextColor="#000000">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#000000"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Button android:id="@+id/btnSendOTP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OTP" android:layout_marginStart="8dp" android:backgroundTint="#000000"/>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter OTP *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginTop="12dp" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etOTP" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:textColor="#000000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout android:id="@+id/layoutReception" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="visible">
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Aadhar No *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAadhar" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="12" android:textColor="#000000"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Spinner android:id="@+id/spinnerGate" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginBottom="12dp" android:background="@drawable/spinner_border" android:padding="10dp"/>
+                    <Spinner android:id="@+id/spinnerShift" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginBottom="12dp" android:background="@drawable/spinner_border" android:padding="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/layoutResident" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Society Name *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSociety" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#000000"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Wing *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etWing" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#000000"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Flat Number *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etFlatNo" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:textColor="#000000"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Password *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" app:passwordToggleEnabled="true" android:layout_marginBottom="12dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:textColor="#000000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Confirm Password *" app:boxStrokeColor="#000000" app:hintTextColor="#000000" app:passwordToggleEnabled="true" android:layout_marginBottom="24dp">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etConfirmPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:textColor="#000000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button android:id="@+id/btnRegisterAccount" android:layout_width="match_parent" android:layout_height="56dp" android:text="REGISTER" android:backgroundTint="#000000" android:textColor="#FFFFFF" app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

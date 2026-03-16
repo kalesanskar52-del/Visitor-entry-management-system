@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "86660844984",
+    "firebase_url": "https://visitor-management-eb8e0-default-rtdb.firebaseio.com",
+    "project_id": "visitor-management-eb8e0",
+    "storage_bucket": "visitor-management-eb8e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86660844984:android:a8b37c8458aba1c7b6534d",
+        "android_client_info": {
+          "package_name": "com.example.visitormanagemet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBimO53np5HiBeupEzEE_vA6PV9fBfQ9HM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

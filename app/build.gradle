@@ -1,0 +1,64 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.visitormanagemet'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.visitormanagemet"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // Crucial for JavaMail to prevent "Duplicate Files" build error
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/NOTICE.md"
+            excludes += "/META-INF/LICENSE.md"
+            excludes += "/META-INF/DEPENDENCIES"
+            excludes += "/META-INF/mailcap"
+            excludes += "/META-INF/mimetypes.default"
+        }
+    }
+}
+
+dependencies {
+    // UI Core
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Firebase (Using BOM to keep versions synced)
+    implementation platform("com.google.firebase:firebase-bom:33.1.0")
+    implementation "com.google.firebase:firebase-auth"
+    implementation "com.google.firebase:firebase-database" // Realtime DB
+    implementation "com.google.firebase:firebase-firestore"
+
+    // JavaMail (Standard Android Versions)
+    implementation 'com.sun.mail:android-mail:1.6.6'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+
+    // Testing
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
