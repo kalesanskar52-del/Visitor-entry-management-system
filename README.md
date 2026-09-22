@@ -1,4 +1,4 @@
-# Visitor Entry Management System
+# Visitor Management System
 
 Visitor Entry Management System is an Android application designed to manage visitor entries in residential societies.
 
